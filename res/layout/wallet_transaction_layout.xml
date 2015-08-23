@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/croppedspace">
+    	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+		<LinearLayout
+	    android:focusable="true" android:focusableInTouchMode="true"
+	    android:layout_width="0px" android:layout_height="0px"/>
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Large Text"
+            style="@style/NonButtonText"
+            android:textAppearance="?android:attr/textAppearanceLarge" 
+            android:layout_marginBottom="10dp"/>
+
+    	</LinearLayout>
+
+    	 
+
+    		<TextView
+    		    android:id="@+id/textView2"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="Minimum Isk of Transaction to Receive Alert"
+    		    style="@style/NonButtonText"
+    		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    		<EditText
+    		    android:id="@+id/editText1"
+    		    android:layout_width="fill_parent"
+             	android:layout_height="45dp"
+    		     android:background="@drawable/backwithborder"
+    		    
+    		    android:inputType="numberDecimal" 
+    		    style="@style/NonButtonText">
+
+    		    
+    		</EditText>
+
+    	
+
+    	<Button
+             android:id="@+id/setMinIskButton"
+             android:layout_width="fill_parent"
+             android:layout_height="45dp"
+             android:text="Submit"
+              style="@style/NonButtonText"
+             android:onClick="setMinIskThreshold" />
+	    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+         <LinearLayout
+            android:id="@+id/transaction_type_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            
+        </LinearLayout>
+        </ScrollView>
+</LinearLayout>

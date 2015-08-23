@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/croppedspace"
+    android:orientation="vertical" >
+<LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+                <requestFocus />
+                </LinearLayout>
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            
+
+            <TextView
+                android:id="@+id/APIKeysText"
+                style="@style/LargeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="API Keys"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/linkButton"
+                style="@style/NonButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="linkToEveSupport"
+                android:text="Install API Key from Eve Online Website" />
+            <TextView
+                android:id="@+id/ManualEntryText"  
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                style="@style/SmallText"
+                android:text="(If you get redirected to the Eve Community web page, navigate to the Support section of the site, and follow the link that refers to API Key Management.)"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/ManualEntryText"
+                style="@style/NonButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Manual Entry"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/NonButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="KeyID"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/editText1"
+                style="@style/NonButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/backwithborder"
+                android:ems="10"
+                android:inputType="number"
+                 >
+            </EditText>
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/NonButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="vCode"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/editText2"
+                style="@style/NonButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/backwithborder"
+                android:ems="10"
+                android:inputType="textNoSuggestions"
+                 >
+            </EditText>
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/NonButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="retrieveAPIInfo"
+                android:text="Load Characters" />
+
+            <ProgressBar
+                android:id="@+id/spinner"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/charLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/OptionsText"
+                style="@style/LargeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Options"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/NonButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Start App on Device Boot up: "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+				 />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/wifilabel"
+                    style="@style/NonButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Allow Use of Cellular Data: "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/CellularSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+				 />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/FrequencyText"
+                style="@style/NonButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="API Polling Frequency:"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <RadioGroup
+                android:id="@+id/frequencyGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/radio15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    style="@style/NonButtonText"
+                    android:text="15 Minutes" />
+
+                <RadioButton
+                    android:id="@+id/radio30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/NonButtonText"
+                    android:text="30 Minutes" />
+
+                <RadioButton
+                    android:id="@+id/radio60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/NonButtonText"
+                    android:text="60 Minutes" />
+                <RadioButton
+                    android:id="@+id/radio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/NonButtonText"
+                    android:text="2 Hours" />
+                <RadioButton
+                    android:id="@+id/radio4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/NonButtonText"
+                    android:text="4 Hours" />
+                 <RadioButton
+                    android:id="@+id/radio8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/NonButtonText"
+                    android:text="8 Hours" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

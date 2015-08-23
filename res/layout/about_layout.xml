@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/croppedspace"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="About Eve Watch"
+            style="@style/NonButtonText"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" > 
+        <LinearLayout
+            android:id="@+id/LinearLayout02"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+    <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+           
+            android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Eve Watch is an alerting service for players of Eve Online.  Enter your full API key information and load your characters to get started.  The app will start with a default set of events to notify you about as they occur, but you can customize which ones you'd like to be alerted to."
+            style="@style/NonButtonText"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <TextView
+            android:id="@+id/textView3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="You will notice a delay between when events happen in Eve Online and when they are reported by Eve Watch.  This is due to two things: first, the Eve API servers only update your character information periodically, and second, Eve Watch only polls for information every fifteen minutes.  Any more frequently would drain your battery faster and use quite a bit more bandwidth."
+            style="@style/NonButtonText"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <TextView
+            android:id="@+id/textView4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Some of the event names have very vague descriptions.  I can't do anything about those because I don't know what they truly are.  So, if you ever get an alert and the description of the event is very vague, please log in to Eve and figure out what the event was (it will be an in-game notification) and let me know so I can provide a better description.  Also, I try to provide a translation for some of the raw data associated with in-game notifications so you can at least figure out some of the details without logging into the game.  If you see data that is left in the form of a string of numbers and you think it represents a character, corp, star system, or a buyable/sellable item, or if you feel that the presented data doesn't tell you much about the event, please send me a screenshot of the message so I can translate that in an update for the app."
+            style="@style/NonButtonText"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <TextView
+            android:id="@+id/textView5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="This app is free, and it always will be.  There are no ads, and there never will be.  You can email me at hotdogrebel@gmail.com."
+       		style="@style/NonButtonText"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <TextView
+            android:id="@+id/textView6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="If Eve Watch has been useful to you, please rate it on the Google Play market."
+       		style="@style/NonButtonText"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+     </LinearLayout>
+     </ScrollView>
+	
+</LinearLayout>
